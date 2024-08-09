@@ -1,8 +1,16 @@
+import Banner from "./components/Banner"
+import Footer from "./components/Footer"
+import Freebook from "./components/Freebook"
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
-    <div className="text-3xl font-bold underline" > helooo 
-
-    </div>
+   <>
+   <Navbar/>
+   <Banner/>
+   <Freebook/>
+   <Footer/>
+   </>
   )
 }
 export default App
