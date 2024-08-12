@@ -1,0 +1,31 @@
+import express from 'express'
+import dotenv from 'dotenv'
+import mongoose from 'mongoose'
+import bookroute from './routes/book_routes.js'
+
+const app = express()
+dotenv.config()
+
+const PORT = process.env.PORT || 4000
+const URI = process.env.MONGO_URL ;
+
+
+try {
+    mongoose.connect(URI, {
+        
+        
+    });
+    console.log("Connected to mongoDB")
+    
+    
+} catch (error) {
+    
+    console.log("Error:" , error)
+    
+}
+
+app.use('/book',bookroute)
+
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
+})
