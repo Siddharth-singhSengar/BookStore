@@ -43,7 +43,7 @@ function Login() {
   return (
     <div>
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box">
+        <div className="modal-box dark:bg-slate-900 dark:text-white">
           <form onSubmit={handleSubmit(onSubmit)} method="dialog">
             <Link
               to="/"
@@ -72,7 +72,7 @@ function Login() {
             </div>
 
             <div className="mt-4 space-y-2">
-              <span>Password</span>
+              <span className="">Password</span>
               <br />
               <input
                 type="password"
